@@ -10,3 +10,10 @@ A responsive music streaming web application built with React, Tailwind CSS, and
 •🎨 Clean and responsive UI using Tailwind CSS  
 •🔄 Client-side routing with react-router-dom  
 •🌐 Global state management using React Context API  
+
+# 📝 Setup Instructions
+•Install dependencies:  
+ npm install  
+
+•Run the development server:  
+ npm run dev  
