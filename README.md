@@ -2,6 +2,8 @@
 A responsive music streaming web application built with React, Tailwind CSS, and React Context API. It features real-time audio playback, album and track browsing, and a modern UI inspired by mainstream platforms.
 
 # 🚀 Demo
+![image](https://github.com/user-attachments/assets/55dbf117-d2b5-4ac3-a7ee-d395c0c01281)
+
 
 # 🧠 Features
 •🎧 Audio player with play/pause, previous/next, seek bar, and real-time duration display  
