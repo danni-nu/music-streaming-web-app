@@ -11,6 +11,14 @@ A responsive music streaming web application built with React, Tailwind CSS, and
 •🔄 Client-side routing with react-router-dom  
 •🌐 Global state management using React Context API  
 
+# 🛠 Tech Stack
+| Category   | Tools/Libraries                                                                |  
+| ---------- | -------------------------------------------------------------------------------|  
+| Frontend   | React, React Router v6, Tailwind CSS                                           |  
+| State Mgmt | React Context API, useState, useEffect, useRef                                 |  
+| Audio API  | Web Audio API via HTML5 `<audio>` tag                                          |  
+| Tooling    | Vite / Create React App, Git                                                   |    
+
 # 📝 Setup Instructions
 •Install dependencies:  
  npm install  
