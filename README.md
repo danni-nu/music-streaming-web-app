@@ -4,9 +4,9 @@ A responsive music streaming web application built with React, Tailwind CSS, and
 # 🚀 Demo
 
 # 🧠 Features
-•🎧 Audio player with play/pause, previous/next, seek bar, and real-time duration display
-•📀 Browse albums and songs from mock data
-•🗂️ Component-based architecture (Navbar, Sidebar, Player, Display, etc.)
-•🎨 Clean and responsive UI using Tailwind CSS
-•🔄 Client-side routing with react-router-dom
-•🌐 Global state management using React Context API
+•🎧 Audio player with play/pause, previous/next, seek bar, and real-time duration display  
+•📀 Browse albums and songs from mock data  
+•🗂️ Component-based architecture (Navbar, Sidebar, Player, Display, etc.)  
+•🎨 Clean and responsive UI using Tailwind CSS  
+•🔄 Client-side routing with react-router-dom  
+•🌐 Global state management using React Context API  
