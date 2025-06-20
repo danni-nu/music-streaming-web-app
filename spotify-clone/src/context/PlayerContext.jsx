@@ -22,13 +22,13 @@ const PlayerContextProvider = (props) => {
         }
     })
 
-    const play = () => {
-        audioRef.current.play()
+    const play = async () => {
+        await audioRef.current.play() //修改成等待promise结果
         setPlayStatus(true)
     }
 
-    const pause = () => {
-        audioRef.current.pause();
+    const pause = async () => {
+        await audioRef.current.pause(); //修改成等待promise结果
         setPlayStatus(false);
     }
 
