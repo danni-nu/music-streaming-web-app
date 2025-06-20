@@ -58,25 +58,38 @@ const PlayerContextProvider = (props) => {
         audioRef.current.currentTime = ((e.nativeEvent.offsetX / seekBg.current.offsetWidth)*audioRef.current.duration)
     }
 
-    useEffect(()=>{ 
-        setTimeout(()=> {
-        audioRef.current.ontimeupdate = () => {
-            seekBar.current.style.width = (Math.floor(audioRef.current.currentTime/audioRef.current.duration*100))+"%"
-            setTime({
-                currentTime: {
-                    second:Math.floor(audioRef.current.currentTime % 60),
-                    minute:Math.floor(audioRef.current.currentTime / 60)
-                },
-                totalTime: {
-                    second: Math.floor(audioRef.current.duration % 60),
-                    minute: Math.floor(audioRef.current.duration / 60)
-                }
+    useEffect(() => {
+  const audio = audioRef.current;
+  if (!audio) return;
 
-            })
+  const updateTimeDisplay = () => {
+    const currentTime = audio.currentTime;
+    const duration = audio.duration || 0;
 
-        }
-    },1000);
-    },[audioRef])  //这里audioRef/audioRef.current写了和[]一样 
+    // 更新进度条（直接DOM操作）
+    seekBar.current.style.width = `${Math.floor((currentTime / duration) * 100)}%`;
+
+    // 更新React状态
+    setTime({
+      currentTime: {
+        second: Math.floor(currentTime % 60),
+        minute: Math.floor(currentTime / 60)
+      },
+      totalTime: {
+        second: Math.floor(duration % 60),
+        minute: Math.floor(duration / 60)
+      }
+    });
+  };
+
+  // 现代事件监听写法
+  audio.addEventListener('timeupdate', updateTimeDisplay);
+  
+  // 清理函数
+  return () => {
+    audio.removeEventListener('timeupdate', updateTimeDisplay);
+  };
+}, [audioRef?.current]);  //更精确的依赖项目
 
 /*用户打开页面
   ↓
